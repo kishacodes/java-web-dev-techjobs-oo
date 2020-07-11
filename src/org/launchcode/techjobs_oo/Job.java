@@ -1,5 +1,5 @@
 package org.launchcode.techjobs_oo;
-
+//stuck on 4.3 how to code the Data not available into the multiline string along with other lines
 import java.util.Objects;
 
 public class Job {
@@ -47,6 +47,17 @@ public class Job {
     }
 
     @Override
+    public String toString() {
+        return
+                "ID: " + getId()+ "\n" +
+                "Name: " + getName()+ "\n" +
+                "Employer: " + getEmployer()+ "\n" +
+               "Location: " + getLocation()+ "\n" +
+                "Position Type: " + getPositionType()+ "\n" +
+                "Core Competency: " + getId(); //+ "\n";
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
     }
@@ -60,13 +71,15 @@ public class Job {
     }
 
     public String getName() {
-        return name;
+            return name;
+
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name == "") {
+            this.name = "Data not available.";
+        } else this.name = name;
     }
-
     public Employer getEmployer() {
         return employer;
     }

@@ -36,5 +36,25 @@ public class JobTest {
 
         assertFalse(job4.equals(job5));
     }
+//Test toString method
 
+
+//    @Test
+//    public void testJobsForToStringCorrectly() {
+//        Job job5 = new Job("software engineer", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
+//                CoreCompetency("java certified"));
+//        assertEquals(job5.toString(),"_");
+//    }
+//    @Test
+//    public void testJobsForToStringWithLabelCorrectly() {
+//        Job job5 = new Job("software engineer", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
+//                CoreCompetency("java certified"));
+//        assertEquals(job5.toString(),"ID: 3");
+//    }
+    @Test
+    public void testJobsForToStringWithNullLabelCorrectly() {
+        Job job5 = new Job("", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
+                CoreCompetency("java certified"));
+        assertEquals(job5.toString(),"Name: Data not available.");
+    }
 }
