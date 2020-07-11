@@ -34,7 +34,7 @@ public class JobTest {
         Job job5 = new Job("software engineer", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
                 CoreCompetency("java certified"));
 
-        assertFalse(job5.getId() == job4.getId());
+        assertFalse(job4.equals(job5));
     }
 
 }
