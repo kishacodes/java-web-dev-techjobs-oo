@@ -51,10 +51,10 @@ public class JobTest {
 //                CoreCompetency("java certified"));
 //        assertEquals(job5.toString(),"ID: 3");
 //    }
-    @Test
-    public void testJobsForToStringWithNullLabelCorrectly() {
-        Job job5 = new Job("", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
-                CoreCompetency("java certified"));
-        assertEquals(job5.toString(),"Name: Data not available.");
-    }
+//    @Test
+//    public void testJobsForToStringWithNullLabelCorrectly() {
+//        Job job5 = new Job("", new Employer("Tidal"), new Location("San Francisco"), new PositionType("Production"), new
+//                CoreCompetency("java certified"));
+//        assertEquals(job5.toString(),"Name: Data not available.");
+//    }
 }

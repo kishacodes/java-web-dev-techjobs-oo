@@ -72,11 +72,10 @@ public class Job {
 
     public String getName() {
             return name;
-
     }
 
-    public void setName(String name) {
-        if (name == "") {
+    public void setName(String name) {  //tried null & name "" & ==
+        if (name.equals("")) {
             this.name = "Data not available.";
         } else this.name = name;
     }
