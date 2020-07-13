@@ -85,9 +85,9 @@ public class Job {
     }
 
     public void setEmployer(Employer employer) {
-        if (employer.getValue() == "") {
-            this.employer.setValue("Data not available");
-        }
+//        if (employer.getValue().isEmpty()) {
+//            employer.setValue("Data not available");
+//        }
         this.employer = employer;
     }
 

@@ -38,10 +38,15 @@ public abstract class JobField {
     }
 
     public String getValue() {
-        return value;
+        if (value.isEmpty()) {
+            return value = "Data not available.";
+        } else return value;
     }
 
     public void setValue(String value) {
+        if (value.isBlank()) {
+            this.value = "Data not available.";
+        }
         this.value = value;
     }
 
