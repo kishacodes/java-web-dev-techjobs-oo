@@ -71,19 +71,23 @@ public class Job {
     }
 
     public String getName() {
+        if (this.name == "") {
+            return this.name = "Data not available.";
+        }
             return name;
     }
 
-    public void setName(String name) {  //tried null & name "" & ==
-        if (name.equals("")) {
-            this.name = "Data not available.";
-        } else this.name = name;
+    public void setName(String name) {  //tried null & name "" & == & isEmpty()
+        this.name = name;
     }
     public Employer getEmployer() {
         return employer;
     }
 
     public void setEmployer(Employer employer) {
+        if (employer.getValue() == "") {
+            this.employer.setValue("Data not available");
+        }
         this.employer = employer;
     }
 
