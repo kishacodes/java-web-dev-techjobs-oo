@@ -15,9 +15,10 @@ public abstract class JobField {
     //custom methods
     @Override
     public String toString() {
-        return value;
+        if (this.value == "") {
+            return value = "Data not available.";
+        } else return value;
     }
-
 //    @Override
 //    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
 //        if (this == o) return true;
@@ -38,15 +39,17 @@ public abstract class JobField {
     }
 
     public String getValue() {
-        if (value.isEmpty()) {
-            return value = "Data not available.";
-        } else return value;
+//        if (this.value == "") {
+//            return value = "Data not available.";
+//        }
+//        else
+            return value;
     }
 
     public void setValue(String value) {
-        if (value.isBlank()) {
-            this.value = "Data not available.";
-        }
+//        if (this.value == "") {
+//            this.value = "Data not available.";
+//        }
         this.value = value;
     }
 
